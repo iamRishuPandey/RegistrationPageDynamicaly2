@@ -1,0 +1,73 @@
+class MyStack {
+
+  constructor(){
+
+  this.maxSize = 10;
+
+  this.stackArray = [];
+
+  this.top = -1;
+
+  }
+
+
+
+  push(element) {
+
+   this.stackArray[++this.top] = element;
+
+  }
+
+  pop() {
+
+   return this.stackArray[this.top--];
+
+  }
+
+  peek() {
+
+   return this.stackArray[this.top];
+
+  }
+
+  isEmpty() {
+
+   return (this.top == -1);
+
+  }
+
+  isFull() {
+
+   return (this.top == this.maxSize - 1);
+
+  }
+
+}
+
+   myStack = new MyStack(10); 
+
+   myStack.push(40);
+
+   myStack.push(50);
+
+   myStack.push(60);
+
+   myStack.push(70);
+
+   myStack.push(80);
+
+   console.log(myStack.peek());
+
+   console.log(myStack.stackArray);
+
+   while (!myStack.isEmpty())
+
+   {
+
+     var value = myStack.pop();
+
+     console.log(value);
+
+   }
+
+   //console.log("");
